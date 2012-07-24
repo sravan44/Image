@@ -1,0 +1,8 @@
+<p id="notice"><%= notice %></p>
+
+<%#= image_tag @photo.avatar.url %>
+<%= image_tag @photo.avatar.url(:medium) %><br>
+<%#= image_tag @photo.avatar.url(:thumb) %>
+
+<%= link_to 'Edit', edit_photo_path(@photo) %> |
+<%= link_to 'Back', photos_path %>

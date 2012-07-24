@@ -1,0 +1,17 @@
+<h1>Listing photos</h1>
+
+<div><%= link_to 'New Photo', new_photo_path %></div>
+<ul style="list-style-type:none">
+
+<% @photos.each do |photo| %>
+<div >
+<li style="float:left;padding-left:10px;height:250px;width:260px;">
+<%= image_tag photo.avatar.url(:medium) %><br>
+
+<%= link_to 'Download Image',:action=>"downloadimage", :id=>photo.id %>
+
+<%#= link_to 'Delete Photo'%>
+</li>
+</div>
+<% end %><br>
+
